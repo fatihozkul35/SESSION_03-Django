@@ -1,0 +1,26 @@
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href={% static "app/style.css" %}>
+</head>
+
+<h1>This is Index page!</h1>
+
+My name is {{ isim | upper }} - {{ soyisim }}.
+
+<img src={% static "app/kitten.jpg" %} alt="Kitten" height="300">
+
+{# Bu tek satır yorum! #}
+<ul>
+{% for i in my_list %}
+  <br> <li>{{ i }}</li> 
+{% endfor %}
+</ul> 
+
+
+{% comment %}
+    Birden
+    Fazla
+    satır
+{% endcomment %}
+    
